@@ -1,0 +1,38 @@
+"""
+PROBLEM STATEMENT :Write a Python program that reads two integers representing a month and day and prints the season for that month and day.
+"""
+
+month = input("Input the month (e.g. January, February etc.): ")
+
+day = int(input("Input the day: "))
+
+# winter season
+if month in ('January', 'February', 'March'):
+    season = 'winter'
+#  spring season
+elif month in ('April', 'May', 'June'):
+    season = 'spring'
+#  summer season
+elif month in ('July', 'August', 'September'):
+    season = 'summer'
+# For other months season as autumn by default
+else:
+    season = 'autumn'
+
+
+
+if (month == 'March') and (day > 19):
+    season = 'spring'
+
+elif (month == 'June') and (day > 20):
+    season = 'summer'
+
+elif (month == 'September') and (day > 21):
+    season = 'autumn'
+
+elif (month == 'December') and (day > 20):
+    season = 'winter'
+
+
+
+print("Season is", season) 
